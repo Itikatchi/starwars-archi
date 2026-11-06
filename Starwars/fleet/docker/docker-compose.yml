@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres:trixie
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: youshouldnotpass
+      POSTGRES_USER: api
+      POSTGRES_DB: fleet
+    ports:
+      - 5432:5432
